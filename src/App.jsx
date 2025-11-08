@@ -73,7 +73,7 @@ function App() {
         <TrophyWatermark />
         
         {/* Chinese Corner Decorations */}
-        <div className="absolute top-2 left-2 w-12 h-12 opacity-30">
+        {/* <div className="absolute top-2 left-2 w-12 h-12 opacity-30">
           <svg viewBox="0 0 50 50">
             <path d="M5 5 L15 5 L15 15 M35 5 L45 5 L45 15 M5 35 L5 45 L15 45 M35 45 L45 45 L45 35" stroke="#930000" strokeWidth="3" fill="none"/>
             <circle cx="25" cy="25" r="8" fill="#930000" opacity="0.3"/>
@@ -96,7 +96,7 @@ function App() {
             <path d="M5 5 L15 5 L15 15 M35 5 L45 5 L45 15 M5 35 L5 45 L15 45 M35 45 L45 45 L45 35" stroke="#930000" strokeWidth="3" fill="none"/>
             <circle cx="25" cy="25" r="8" fill="#930000" opacity="0.3"/>
           </svg>
-        </div>
+        </div> */}
 
         {/* Red scroll rods at top and bottom */}
         <div className="absolute top-0 left-0 right-0 h-3 bg-gradient-to-r from-[#930000] via-[#b30000] to-[#930000] shadow-md"></div>
