@@ -199,7 +199,7 @@ function App() {
       <div className="fixed bottom-10 right-6 md:right-10 z-20">
         <div className="relative">
           <button
-            onClick={() => window.open("https://automation.devday25.com/#team", "_blank")}
+            onClick={() => window.open("https://acm-official-website-2025.vercel.app/", "_blank")}
             onMouseEnter={() => setShowTooltip(true)}
             onMouseLeave={() => setShowTooltip(false)}
             className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#930000] text-[#FEFEEA] flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300 border-4 border-black/10"
@@ -208,7 +208,7 @@ function App() {
           </button>
           {showTooltip && (
             <div className="absolute bottom-full right-0 mb-2 px-4 py-2 bg-black text-white text-sm font-medium rounded-lg whitespace-nowrap shadow-xl">
-              Know about the Developers
+              Know about the team behind CODERS CUP
               <div className="absolute top-full right-6 w-0 h-0 border-l-8 border-r-8 border-t-8 border-transparent border-t-black"></div>
             </div>
           )}
