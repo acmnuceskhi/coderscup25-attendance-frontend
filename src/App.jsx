@@ -130,10 +130,10 @@ function App() {
               <h3 className="font-bold text-xl text-[#930000]">
                 {currPage === "Attendance" ? "Attendance" : "Certificate"} for team
               </h3>
-              <p className="text-2xl font-black text-black">{(attendedTeam?.Team_Name && attendedTeam.Team_Name.length > 0) ?
-                (attendedTeam.Team_Name.length > 30
-                  ? attendedTeam.Team_Name.substring(0, 27) + "..."
-                  : attendedTeam.Team_Name)
+              <p className="text-2xl font-black text-black">{(attendedTeam?.team_name && attendedTeam.team_name.length > 0) ?
+                (attendedTeam.team_name.length > 30
+                  ? attendedTeam.team_name.substring(0, 27) + "..."
+                  : attendedTeam.team_name)
                 : "Unnamed Team"}
               </p>
               <p className="text-lg font-semibold text-[#930000]">
