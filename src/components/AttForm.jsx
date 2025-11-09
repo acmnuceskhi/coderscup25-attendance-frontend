@@ -233,7 +233,7 @@ export function AttForm({ page, setAttendedTeam, setIsAlreadyMarked }) {
           <FormItem>
             <FormControl>
               <Input 
-                placeholder="Enter 7-character code" 
+                placeholder="Enter 8-character code" 
                 {...field} 
                 maxLength={8}
                 className="w-full px-6 py-3 rounded-lg border-3 border-[#930000] bg-[#FEFEEA]/80 backdrop-blur-sm text-black placeholder-gray-600 focus:outline-none focus:ring-4 focus:ring-[#930000]/30 font-medium text-lg shadow-inner"
