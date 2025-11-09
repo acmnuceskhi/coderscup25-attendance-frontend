@@ -195,32 +195,32 @@ export function AttForm({ page, setAttendedTeam, setIsAlreadyMarked }) {
   };
 
 
-  if (team.length > 0) {
-    return (
-      <div className="w-full flex flex-col gap-4 z-10 relative">
-        <h2 className="text-xl font-bold text-[#930000]">Click to download certificates</h2>
-        <div className="w-full max-h-[50vh] overflow-y-auto flex gap-3 flex-wrap justify-center border-t-2 pt-5 pb-2 border-[#930000]/30">
-          {team.map((member, index) => (
-            <button
-              key={index}
-              onClick={() => downloadCertificate(member.downloadUrl, member.memberName, index)}
-              className="flex bg-[#930000] text-[#FEFEEA] rounded-lg items-center justify-center text-sm font-semibold px-4 py-3 cursor-pointer min-w-[150px] sm:w-[200px] w-full hover:bg-[#7a0000] transition-all duration-300 shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105"
-              disabled={downloadingIndex === index}
-            >
-              {downloadingIndex === index ? (
-                <span className="flex gap-2 items-center">
-                  <div className="w-4 h-4 border-2 border-[#FEFEEA] border-t-transparent rounded-full animate-spin"></div>
-                  Loading...
-                </span>
-              ) : (
-                member.memberName
-              )}
-            </button>
-          ))}
-        </div>
-      </div>
-    );
-  }
+  // if (team.length > 0) {
+  //   return (
+  //     <div className="w-full flex flex-col gap-4 z-10 relative">
+  //       <h2 className="text-xl font-bold text-[#930000]">Click to download certificates</h2>
+  //       <div className="w-full max-h-[50vh] overflow-y-auto flex gap-3 flex-wrap justify-center border-t-2 pt-5 pb-2 border-[#930000]/30">
+  //         {team.map((member, index) => (
+  //           <button
+  //             key={index}
+  //             onClick={() => downloadCertificate(member.downloadUrl, member.memberName, index)}
+  //             className="flex bg-[#930000] text-[#FEFEEA] rounded-lg items-center justify-center text-sm font-semibold px-4 py-3 cursor-pointer min-w-[150px] sm:w-[200px] w-full hover:bg-[#7a0000] transition-all duration-300 shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105"
+  //             disabled={downloadingIndex === index}
+  //           >
+  //             {downloadingIndex === index ? (
+  //               <span className="flex gap-2 items-center">
+  //                 <div className="w-4 h-4 border-2 border-[#FEFEEA] border-t-transparent rounded-full animate-spin"></div>
+  //                 Loading...
+  //               </span>
+  //             ) : (
+  //               member.memberName
+  //             )}
+  //           </button>
+  //         ))}
+  //       </div>
+  //     </div>
+  //   );
+  // }
 
   return (
   <Form {...form}>
