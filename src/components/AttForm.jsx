@@ -18,6 +18,8 @@ import { BarLoader, BeatLoader } from "react-spinners";
 import Turnstile from "react-turnstile";
 import { FaCheck } from "react-icons/fa6";
 
+const BACKEND_URL = (import.meta.env.VITE_BACKEND_URL || "").replace(/\/+$/, "");
+
 const formSchema = z.object({
   att_code: z.string().length(8, {
     message: "Enter the eight chars long code sent to your email.",
@@ -88,7 +90,7 @@ export function AttForm({ page, setAttendedTeam, setIsAlreadyMarked }) {
           //   console.error("Error creating participant:", error);
           // }
           try {
-            const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/attendance/mark`, {
+            const response = await axios.post(`${BACKEND_URL}/api/attendance/mark`, {
               att_code,
               coordinates: ciphertext
             });
@@ -125,7 +127,7 @@ export function AttForm({ page, setAttendedTeam, setIsAlreadyMarked }) {
     } else if (page === "Certificate") {
       // certificate generation logic
       try {
-        const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/certificates`, {
+        const response = await axios.post(`${BACKEND_URL}/api/certificates`, {
           att_code,
         });
         toast.success(response.data.message);
@@ -151,7 +153,7 @@ export function AttForm({ page, setAttendedTeam, setIsAlreadyMarked }) {
   const downloadCertificate = async (downloadUrl, memberName, index) => {
     setDownloadingIndex(index);
     try {
-      const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}${downloadUrl}`, {
+      const response = await axios.get(`${BACKEND_URL}${downloadUrl}`, {
         responseType: "blob",
       });
 
